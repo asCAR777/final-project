@@ -1,0 +1,131 @@
+html,
+body {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+body {
+    padding-top: 46px;
+}
+
+.site-footer-frame {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+}
+
+.site-footer-frame {
+    height: 280px;
+}
+
+.main-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.start-img{
+    display: block;
+    width: 100%;
+    height: 984px;
+    object-fit: cover;
+}
+
+.main-start{
+    position: relative;
+}
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll-to-cards {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    margin-top: 20px;
+    transform: translateY(20px);
+    place-items: center;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+.scroll-to-cards:hover,
+.scroll-to-cards:focus-visible {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#cards {
+    scroll-margin-top: 70px;
+}
+
+.text-main{
+    font-family: 'myfont', sans-serif;
+    max-width: 95%;
+    font-size: clamp(36px, 8vw, 107px);
+    line-height: 1;
+    text-align: center;
+    color: white;
+}
+
+.main-input {
+    display: block;
+    box-sizing: border-box;
+    width: min(500px, 85vw);
+    height: 30px;
+}
+
+.main-button{
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    width: min(500px, 85vw);
+    height: 30px;
+    border: 1px solid black;
+}
+
+
+
+@font-face {
+  font-family: 'myfont'; 
+  src: url('./fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
+@media (max-width: 700px) {
+    body {
+        padding-top: 55px;
+    }
+
+    .site-footer-frame {
+        height: 420px;
+    }
+}
+
+@media (max-width: 350px) {
+    .site-footer-frame {
+        height: 460px;
+    }
+}

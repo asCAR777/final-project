@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-footer {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 280px;
+    padding: 48px 24px 18px;
+    background-color: #000000;
+}
+
+.footer-content {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px minmax(0, 720px) 150px;
+    align-items: center;
+    column-gap: clamp(28px, 8vw, 56px);
+    justify-content: center;
+}
+
+.footer-img {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.footer-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-info {
+    min-width: 0;
+    max-width: 720px;
+}
+
+.footer-title {
+    margin: 0 0 18px;
+    color: #999999;
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.footer-description {
+    max-width: 680px;
+    margin: 0 0 18px;
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.footer-contact-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: start;
+    color: #999999;
+    font-size: 16px;
+    list-style: none;
+}
+
+.footer-social-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: start;
+    grid-column: 3;
+    grid-row: 1;
+    text-align: left;
+}
+
+.footer-extra {
+    margin-top: 12px;
+}
+
+.footer-extra p {
+    margin: 0;
+    color: #777777;
+    font-size: 11px;
+}
+
+.footer-extra span {
+    text-decoration: underline;
+}
+
+.footer-contact-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        min-height: 0;
+        padding: 36px 22px 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: 64px minmax(0, 1fr);
+        align-items: start;
+        column-gap: 18px;
+    }
+
+    .footer-img {
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
+    }
+
+    .footer-social-area {
+        grid-column: 2;
+        grid-row: 2;
+        align-items: flex-start;
+        margin-top: 18px;
+    }
+
+    .footer-title {
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+}

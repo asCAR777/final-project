@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | On The Move</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&amp;display=swap">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./videos.css">
+    <link rel="stylesheet" href="./msg.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <div class="header-inner">
+            <a class="site-brand" href="./home.html" aria-label="On The Move home">
+                On The Move
+            </a>
+
+            <input class="menu-checkbox visually-hidden" type="checkbox" id="menu-checkbox" aria-label="Toggle navigation menu">
+            <label class="menu-toggle" for="menu-checkbox">
+                <i class="menu-open-icon fa-solid fa-bars" aria-hidden="true"></i>
+                <i class="menu-close-icon fa-solid fa-xmark" aria-hidden="true"></i>
+                <span class="visually-hidden">Menu</span>
+            </label>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="./home.html">Home</a></li>
+                    <li><a class="nav-link" href="./allposts.html">Blog</a></li>
+                    <li><a class="nav-link nav-link-current" href="./videos.html" aria-current="page">Videos</a></li>
+                    <li><a class="nav-link" href="./info.html">Info</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-icons" aria-hidden="true">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="videos-main">
+        <section class="videos-heading" aria-labelledby="videos-title">
+            <h1 id="videos-title">Videos</h1>
+        </section>
+
+        <section class="featured-video" aria-label="Featured video">
+            <div class="featured-video-image">
+                <iframe
+                    class="featured-video-player"
+                    name="video-player"
+                    src="./poster.html#v1"
+                    title="Video player"
+                    allow="autoplay *; encrypted-media *; clipboard-write *; picture-in-picture *; gyroscope *; accelerometer *; web-share *; fullscreen *"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
+        <section class="video-library" aria-labelledby="video-library-title">
+            <h2 id="video-library-title" class="visually-hidden">Choose a video</h2>
+            <div class="video-list">
+                <a class="video-thumb" href="./poster.html#v1" target="video-player"
+                   title="FPV Drone Flight through Beautiful Iceland Canyon">
+                    <img src="https://i.ytimg.com/vi/kcfs1-ryKWE/mqdefault.jpg"
+                         alt="FPV Drone Flight through Beautiful Iceland Canyon" loading="lazy">
+                </a>
+
+                <a class="video-thumb" href="./poster.html#v2" target="video-player"
+                   title="Mountain Therapy | New Zealand Outdoor Adventure Film">
+                    <img src="https://i.ytimg.com/vi/W5tBqVOCeRY/mqdefault.jpg"
+                         alt="Mountain Therapy | New Zealand Outdoor Adventure Film" loading="lazy">
+                </a>
+
+                <a class="video-thumb" href="./poster.html#v3" target="video-player"
+                   title="Merrell - Good Things Come to Those Who Hike">
+                    <img src="https://i.ytimg.com/vi/-pwz-WHVMsI/mqdefault.jpg"
+                         alt="Merrell - Good Things Come to Those Who Hike" loading="lazy">
+                </a>
+
+                <a class="video-thumb" href="./poster.html#v4" target="video-player"
+                   title="The Mountains - Cinematic Short Film">
+                    <img src="https://i.ytimg.com/vi/JUh4koZ8Uqw/mqdefault.jpg"
+                         alt="The Mountains - Cinematic Short Film" loading="lazy">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <iframe class="site-footer-frame" src="./footer.html" title="Site footer" scrolling="no"></iframe>
+    <div class="message-icon" aria-hidden="true">
+        <i class="fa-solid fa-message"></i>
+    </div>
+</body>
+</html>

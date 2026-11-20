@@ -33,7 +33,7 @@ body {
     min-width: 220px;
     margin-right: auto;
     padding: 0 24px;
-    background-color: #14251f;
+    background-color: #000000;
     color: #ffffff;
     font-size: 15px;
     font-weight: 700;
@@ -186,5 +186,24 @@ body {
     .menu-checkbox,
     .menu-toggle {
         display: none;
+    }
+}
+
+@media (max-width: 150px) {
+    .header-inner {
+        padding-right: 4px;
+    }
+
+    .site-brand {
+        padding: 0 4px;
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .menu-toggle {
+        width: 22px;
+        height: 22px;
+        margin-left: 4px;
+        font-size: 14px;
     }
 }

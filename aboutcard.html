@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./aboutcard.css">
+    <link rel="stylesheet" href="./msg.css">
 </head>
 <body>
     <header class="site-header" id="home">
@@ -26,9 +27,9 @@
             <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a class="nav-link" href="./home.html">Home</a></li>
-                    <li><a class="nav-link" href="./blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="./about.html">About</a></li>
-                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a class="nav-link nav-link-current" href="./allposts.html" aria-current="page">Blog</a></li>
+                    <li><a class="nav-link" href="./videos.html">videos</a></li>
+                    <li><a class="nav-link" href="./info.html">info</a></li>
                 </ul>
             </nav>
 
@@ -42,21 +43,133 @@
 
 
     <div class="MAIN">
-        <ul class="posts">
-            <li>All posts</li>
-            <li>Air</li>
-            <li>Water</li>
-            <li>Earth</li>
-            <li>Ice</li>
+        <ul class="posts" aria-label="Post categories">
+            <li><a href="./allposts.html">All Posts</a></li>
+            <li><a href="./air.html">Air</a></li>
+            <li><a href="./water.html">Water</a></li>
+            <li><a href="./earth.html">Earth</a></li>
+            <li><a href="./ice.html">Ice</a></li>
+            <li class="posts-search" aria-label="Search posts">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </li>
         </ul>
 
         <div class="inmain">
 
+            <div class="post-heading">
+                <div class="post-author">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <p>Admin <span aria-hidden="true">·</span> Mar 21, 2023 <span aria-hidden="true">·</span> 2 min read</p>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical post-options" aria-hidden="true"></i>
+            </div>
+
+            <h1 class="post-title">5 extreme water sports to try this summer</h1>
+            <p class="post-description">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....</p>
+
+            <img class="post-image" src="https://static.wixstatic.com/media/fa4cb9632946462fb9b64d5bc2c754b5.jpg/v1/fill/w_459,h_345,fp_0.50_0.50,q_90,enc_avif,quality_auto/fa4cb9632946462fb9b64d5bc2c754b5.jpg" alt="A surfer riding a wave">
+
+            <div class="post-content">
+                <p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+
+                <h2>Design with Ease</h2>
+                <blockquote class="post-quote">“Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.” </blockquote>
+                <p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+
+                <h2>Create Relevant Content</h2>
+                <p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<span class="post-hashtag">#vacation</span> <span class="post-hashtag">#dream</span> <span class="post-hashtag">#summer</span>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <span class="post-hashtag">#hashtag</span> away.</p>
+
+                <h2>Stun Your Readers </h2>
+                <blockquote class="post-quote">“Be original, show off your style, and tell your story.”</blockquote>
+                <p>Blogging gives your site a voice, so let your business’ personality shine through. Are you a creative agency? Go wild with original blog posts about recent projects, cool inspirational ideas, or what your company culture is like. Add images, and videos to really spice it up, and pepper it with slang to keep readers interested. Are you a programmer? Stay on the more technical side by offering weekly tips, tricks, and hacks that show off your knowledge of the industry. No matter what type of business you have, one thing is for sure - blogging gives your business the opportunity to be heard in a way in a different and unconventional way.</p>
+
+                <h2>Get Inspired</h2>
+                <p>To keep up with all things Wix, including website building tips and interesting articles, head over to to the Wix Blog. You may even find yourself inspired to start crafting your own blog, adding unique content, and stunning images and videos. Start creating your own blog now. Good luck!</p>
+
+                <a class="post-category-link" href="./home.html#cards">Water</a>
+            </div>
+
+            <div class="post-social-share">
+                <ul class="post-share-icons" aria-label="Share this post">
+                    <li><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span class="visually-hidden">Facebook</span></li>
+                    <li><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span class="visually-hidden">X</span></li>
+                    <li><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></li>
+                    <li><i class="fa-solid fa-link" aria-hidden="true"></i><span class="visually-hidden">Copy link</span></li>
+                </ul>
+            </div>
+
+            <div class="post-engagement">
+                <div class="post-stats">
+                    <span>658 views</span>
+                    <span>0 comments</span>
+                </div>
+                <div class="post-likes">
+                    <span>11</span>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
+
+        <section class="recent-posts" aria-labelledby="recent-posts-title">
+            <div class="section-heading">
+                <h2 id="recent-posts-title">Recent Posts</h2>
+                <a href="./allposts.html">See All</a>
+            </div>
+
+            <div class="recent-post-list">
+                <article class="recent-post-card">
+                    <a class="recent-post-link" href="">
+                        <img src="https://static.wixstatic.com/media/b743f8236dd44423a3b2bc9db6e8d35c.jpg/v1/fill/w_216,h_122,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b743f8236dd44423a3b2bc9db6e8d35c.jpg" alt="Surfer riding a breaking wave">
+                        <h3>Caught on camera: incredible action shots</h3>
+                    </a>
+                    <div class="recent-post-stats">
+                        <span><i class="fa-regular fa-eye" aria-hidden="true"></i> 41</span>
+                        <span><i class="fa-regular fa-comment" aria-hidden="true"></i> 0</span>
+                        <span class="recent-post-likes">1 <i class="fa-regular fa-heart" aria-hidden="true"></i></span>
+                    </div>
+                </article>
+
+                <article class="recent-post-card">
+                    <a class="recent-post-link" href="">
+                        <img src="https://static.wixstatic.com/media/83bac34050a54640997901bedd3ec994.jpg/v1/fill/w_216,h_122,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/83bac34050a54640997901bedd3ec994.jpg" alt="Outdoor adventure beside the water">
+                        <h3>What's SUP? Your guide to perfect technique</h3>
+                    </a>
+                    <div class="recent-post-stats">
+                        <span><i class="fa-regular fa-eye" aria-hidden="true"></i> 31</span>
+                        <span><i class="fa-regular fa-comment" aria-hidden="true"></i> 0</span>
+                        <span class="recent-post-likes">1 <i class="fa-regular fa-heart" aria-hidden="true"></i></span>
+                    </div>
+                </article>
+
+                <article class="recent-post-card">
+                    <a class="recent-post-link" href="">
+                        <img src="https://static.wixstatic.com/media/96c225a958524f85be9bb54777282b02.jpg/v1/fill/w_216,h_122,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/96c225a958524f85be9bb54777282b02.jpg" alt="Blue ocean waves along the coast">
+                        <h3>Tips for catching the perfect wave</h3>
+                    </a>
+                    <div class="recent-post-stats">
+                        <span><i class="fa-regular fa-eye" aria-hidden="true"></i> 28</span>
+                        <span><i class="fa-regular fa-comment" aria-hidden="true"></i> 0</span>
+                        <span class="recent-post-likes">2 <i class="fa-regular fa-heart" aria-hidden="true"></i></span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="comments-box" aria-labelledby="comments-title">
+            <h2 id="comments-title">Comments</h2>
+            <form>
+                <label class="visually-hidden" for="comment-input">Write a comment</label>
+                <input id="comment-input" type="text" placeholder="Write a comment...">
+            </form>
+        </section>
+
     </div>
 
 
 
     <iframe class="site-footer-frame" src="./footer.html" title="Site footer" scrolling="no"></iframe>
+    <div class="message-icon" aria-hidden="true">
+        <i class="fa-solid fa-message"></i>
+    </div>
 </body>
 </html>

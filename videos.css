@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+    --videos-bg: #000000;
+    --videos-text: #ffffff;
+    --videos-max-width: 940px;
+    --videos-gap: 14px;
+    --header-height: 72px;
+    --footer-height: 240px;
+}
+
+html,
+body {
+    background: var(--videos-bg);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--videos-text);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.videos-main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: calc(var(--videos-max-width) + 40px);
+    margin: 0 auto;
+    padding: var(--header-height) 20px 72px;
+    box-sizing: border-box;
+}
+
+.videos-heading {
+    padding: 32px 0 64px;
+    text-align: center;
+}
+
+.videos-heading h1 {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.25rem, 9vw, 6.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--videos-text);
+}
+
+.featured-video-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 28px;
+    background: #000000;
+    overflow: hidden;
+}
+
+.featured-video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--videos-gap);
+    padding: 0 10px;
+}
+
+.video-thumb {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #1a1a1a;
+    overflow: hidden;
+    outline-offset: 3px;
+}
+
+.video-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+}
+
+.video-thumb:hover img {
+    opacity: 0.8;
+}
+
+
+body.poster-page {
+    display: block;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.poster {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 16px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    background:
+        linear-gradient(rgba(40, 50, 80, 0.45), rgba(40, 50, 80, 0.45)),
+        var(--poster-maxres) center / cover no-repeat,
+        var(--poster-hq) center / cover no-repeat;
+}
+
+.poster:target,
+.poster-page:not(:has(.poster:target)) #v1 {
+    display: flex;
+}
+
+.poster-1 {
+    --poster-maxres: url("https://i.ytimg.com/vi/kcfs1-ryKWE/maxresdefault.jpg");
+    --poster-hq: url("https://i.ytimg.com/vi/kcfs1-ryKWE/hqdefault.jpg");
+}
+
+.poster-2 {
+    --poster-maxres: url("https://i.ytimg.com/vi/W5tBqVOCeRY/maxresdefault.jpg");
+    --poster-hq: url("https://i.ytimg.com/vi/W5tBqVOCeRY/hqdefault.jpg");
+}
+
+.poster-3 {
+    --poster-maxres: url("https://i.ytimg.com/vi/-pwz-WHVMsI/maxresdefault.jpg");
+    --poster-hq: url("https://i.ytimg.com/vi/-pwz-WHVMsI/hqdefault.jpg");
+}
+
+.poster-4 {
+    --poster-maxres: url("https://i.ytimg.com/vi/JUh4koZ8Uqw/maxresdefault.jpg");
+    --poster-hq: url("https://i.ytimg.com/vi/JUh4koZ8Uqw/hqdefault.jpg");
+}
+
+.poster-title {
+    display: block;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 26px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.play-button svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.poster:hover .play-button,
+.poster:focus-visible .play-button {
+    background: #e6e6e6;
+}
+
+
+.site-footer-frame {
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+    height: var(--footer-height);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: var(--videos-bg);
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    .video-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+
+    .videos-heading {
+        padding: 24px 0 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --footer-height: 420px;
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./msg.css">
 </head>
 <body>
     <header class="site-header" id="home">
@@ -27,9 +28,9 @@
             <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a class="nav-link nav-link-current" href="./home.html" aria-current="page">Home</a></li>
-                    <li><a class="nav-link" href="./blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="./about.html">About</a></li>
-                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="./allposts.html">Blog</a></li>
+                    <li><a class="nav-link" href="./videos.html">videos</a></li>
+                    <li><a class="nav-link" href="./info.html">info</a></li>
                 </ul>
             </nav>
 
@@ -52,8 +53,8 @@
                     <input class="main-input" required type="email" placeholder="Never miss a spot. Enter your email here*">
                     <button class="main-button" type="submit">go!</button>
                 </form>
-                <a class="scroll-to-cards" href="#cards" aria-label="Scroll down to the cards">
-                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                <a class="scroll-button" href="#cards" aria-label="Scroll down to the cards">
+                    <span class="arrow" aria-hidden="true"></span>
                 </a>
             </div>
         </div>
@@ -102,7 +103,7 @@
 
             <div class="card1">
                 <div class="card1-1">
-                    <img src="https://static.wixstatic.com/media/fa4cb9632946462fb9b64d5bc2c754b5.jpg/v1/fill/w_459,h_345,fp_0.50_0.50,q_90,enc_avif,quality_auto/fa4cb9632946462fb9b64d5bc2c754b5.jpg" alt="snowboarding">
+                    <img src="https://static.wixstatic.com/media/00c668c20b244ba1917422a735456622.jpg/v1/fill/w_459,h_345,fp_0.50_0.50,q_90,enc_avif,quality_auto/00c668c20b244ba1917422a735456622.jpg" alt="snowboarding">
                 </div>
 
                 <div class="card1-2">
@@ -170,11 +171,15 @@
         </div>
                 </div>
              
+        <a class="home-show-more" href="./allposts.html">Show More</a>
 
     </main>
 
 
     <iframe class="site-footer-frame" src="./footer.html" title="Site footer" scrolling="no"></iframe>
+    <div class="message-icon" aria-hidden="true">
+        <i class="fa-solid fa-message"></i>
+    </div>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>

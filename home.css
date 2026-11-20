@@ -33,7 +33,7 @@ body {
 .start-img{
     display: block;
     width: 100%;
-    height: 984px;
+    height: clamp(540px, 78vh, 840px);
     object-fit: cover;
 }
 
@@ -51,9 +51,10 @@ body {
     gap: 20px;
     width: 100%;
     transform: translate(-50%, -50%);
+    animation: home-content-in 650ms ease-out both;
 }
 
-.scroll-to-cards {
+.scroll-button {
     display: grid;
     width: 44px;
     height: 44px;
@@ -61,18 +62,24 @@ body {
     transform: translateY(20px);
     place-items: center;
     background-color: #000000;
-    border: 1px solid #ffffff;
     border-radius: 50%;
     color: #ffffff;
     font-size: 18px;
     text-decoration: none;
-    transition: background-color 150ms ease, color 150ms ease;
 }
 
-.scroll-to-cards:hover,
-.scroll-to-cards:focus-visible {
-    background-color: #ffffff;
-    color: #000000;
+.scroll-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    animation: arrow-bob 1.5s ease-in-out infinite;
 }
 
 #cards {
@@ -82,7 +89,7 @@ body {
 .text-main{
     font-family: 'myfont', sans-serif;
     max-width: 95%;
-    font-size: clamp(36px, 8vw, 107px);
+    font-size: clamp(32px, 7vw, 88px);
     line-height: 1;
     text-align: center;
     color: white;
@@ -106,6 +113,49 @@ body {
     border: 1px solid black;
 }
 
+.home-show-more {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 60px;
+    padding: 12px 30px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #171717;
+    font: 14px Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.home-show-more:hover,
+.home-show-more:focus-visible {
+    border-color: #444444;
+    background-color: #444444;
+    color: #ffffff;
+}
+
+@keyframes home-content-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 12px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes arrow-bob {
+    0%,
+    100% {
+        transform: translateY(-2px) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(2px) rotate(45deg);
+    }
+}
 
 
 @font-face {
@@ -127,5 +177,37 @@ body {
 @media (max-width: 350px) {
     .site-footer-frame {
         height: 460px;
+    }
+}
+
+@media (max-width: 150px) {
+    .text-main {
+        font-size: clamp(14px, 16vw, 22px);
+        overflow-wrap: anywhere;
+    }
+
+    .home-show-more {
+        margin-bottom: 40px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .site-footer-frame {
+        height: 600px;
+    }
+}
+
+@media (max-width: 200px) {
+    .site-footer-frame {
+        height: 720px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .main-content,
+    .arrow {
+        animation: none;
     }
 }

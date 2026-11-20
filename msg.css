@@ -1,0 +1,37 @@
+.message-icon {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+    display: grid;
+    width: 62px;
+    height: 62px;
+    place-items: center;
+    border: 1px solid #303030;
+    border-radius: 18px;
+    background-color: #050505;
+    cursor: pointer;
+}
+
+.message-icon i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.footer-document .message-icon {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .message-icon {
+        right: 16px;
+        bottom: 16px;
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+    }
+
+    .message-icon i {
+        font-size: 28px;
+    }
+}

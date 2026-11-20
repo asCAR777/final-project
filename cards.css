@@ -9,10 +9,21 @@
     display: grid;
     grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
     width: 100%;
-    max-width: 1000px;
+    max-width: 780px;
     border: 1px solid #292929;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
+    transition: transform 220ms ease, border-color 220ms ease;
+    animation: card-enter 600ms ease-out both;
+}
+
+.card1:hover {
+    transform: translateY(-3px);
+    border-color: #484848;
+}
+
+.card1-1 {
+    overflow: hidden;
 }
 
 .card1-1 img {
@@ -21,12 +32,17 @@
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    transition: transform 350ms ease;
+}
+
+.card1:hover .card1-1 img {
+    transform: scale(1.025);
 }
 
 .card1-2{
     display: flex;
     flex-direction: column;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: clamp(16px, 2vw, 24px);
 }
 
 .cardinfo {
@@ -46,7 +62,7 @@
 
 .card1-title {
     margin: 0 0 14px;
-    font-size: clamp(22px, 2.2vw, 28px);
+    font-size: clamp(20px, 2vw, 24px);
     font-weight: 700;
     line-height: 1.15;
 }
@@ -96,6 +112,18 @@
     font-size: 18px;
 }
 
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 700px) {
     .main-cards {
         padding: 18px 14px;
@@ -116,5 +144,63 @@
 
     .card1-description {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 220px) {
+    .main-cards {
+        padding: 14px 6px;
+    }
+
+    .card1 {
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .card1-2 {
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .cardinfo {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .cardinfo-top {
+        min-width: 0;
+    }
+
+    .cardinfo-top p {
+        overflow-wrap: anywhere;
+    }
+
+    .card1-title {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .card1-description {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .card1-bottom,
+    .card1-stats {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .card1-bottom {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card1,
+    .card1-1 img {
+        animation: none;
+        transition: none;
     }
 }

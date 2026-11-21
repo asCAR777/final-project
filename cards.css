@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
     width: 100%;
-    max-width: 780px;
+    max-width: 860px;
     background-color: #000000;
     border: 1px solid #292929;
     color: #ffffff;
@@ -18,7 +18,7 @@
     overflow: hidden;
     will-change: transform;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    animation: card-enter 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: card-enter 800ms ease-out forwards;
 }
 
 .card1:hover {
@@ -47,7 +47,7 @@
 .card1-2 {
     display: flex;
     flex-direction: column;
-    padding: clamp(16px, 2vw, 24px);
+    padding: clamp(18px, 2.5vw, 28px);
 }
 
 .cardinfo {
@@ -68,7 +68,7 @@
 
 .card1-title {
     margin: 0 0 14px;
-    font-size: clamp(20px, 2vw, 24px);
+    font-size: clamp(22px, 2.2vw, 26px);
     font-weight: 700;
     line-height: 1.15;
     color: #ffffff;
@@ -83,7 +83,7 @@
 
 .card1-description {
     margin: 0;
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(15px, 1.3vw, 17px);
     line-height: 1.5;
     color: #cccccc;
     transition: color 0.25s ease;
@@ -136,7 +136,7 @@
 @keyframes card-enter {
     from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(20px);
     }
 
     to {
@@ -146,4 +146,82 @@
 }
 
 @media (max-width: 700px) {
-    .
+    .main-cards {
+        padding: 18px 14px;
+    }
+
+    .card1 {
+        grid-template-columns: 1fr;
+    }
+
+    .card1-1 img {
+        height: auto;
+    }
+
+    .card1-2 {
+        min-height: 280px;
+        padding: 20px;
+    }
+
+    .card1-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 220px) {
+    .main-cards {
+        padding: 14px 6px;
+    }
+
+    .card1 {
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .card1-2 {
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .cardinfo {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .cardinfo-top {
+        min-width: 0;
+    }
+
+    .cardinfo-top p {
+        overflow-wrap: anywhere;
+    }
+
+    .card1-title {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .card1-description {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .card1-bottom,
+    .card1-stats {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .card1-bottom {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card1,
+    .card1-1 img {
+        animation: none;
+        transition: none;
+    }
+}

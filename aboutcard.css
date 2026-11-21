@@ -1,10 +1,21 @@
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --border: #292929;
+    --blue: #42a5d5;
+    --light-blue: #168cff;
+    --red: #ff4141;
+    --grey: #aaaaaa;
+}
+
 html,
 body {
     box-sizing: border-box;
     width: 100%;
     min-height: 100%;
     margin: 0;
-    background-color: #000000;
+    background-color: var(--black);
     overflow-x: hidden;
 }
 
@@ -17,7 +28,7 @@ body {
     width: min(640px, calc(100% - 36px));
     margin: 0 auto;
     padding: 15px 0 40px;
-    color: #ffffff;
+    color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,11 +38,11 @@ body {
     align-items: center;
     gap: clamp(14px, 4vw, 30px);
     min-height: 24px;
-    color: #ffffff;
+    padding: 0;
+    color: var(--white);
     font-size: 12px;
     font-weight: 400;
     list-style: none;
-    padding: 0;
 }
 
 .posts li {
@@ -48,7 +59,7 @@ body {
 .posts a:hover,
 .posts a:focus-visible,
 .posts .posts-current a {
-    color: #168cff;
+    color: var(--light-blue);
 }
 
 .posts .posts-search {
@@ -60,7 +71,7 @@ body {
 }
 
 .posts .posts-search:hover {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .inmain {
@@ -69,7 +80,6 @@ body {
     margin-top: 31px;
     padding: 42px clamp(24px, 6vw, 68px) 48px;
     border: 1px solid #202020;
-    animation: article-enter 600ms ease-out both;
 }
 
 .post-heading {
@@ -94,33 +104,33 @@ body {
     height: 32px;
     place-items: center;
     border-radius: 50%;
-    background-color: #aaaaaa;
+    background-color: var(--grey);
     color: #eeeeee;
     font-size: 15px;
 }
 
 .post-author p {
-    color: #ffffff;
+    margin: 0;
+    color: var(--white);
     font-size: 14px;
     line-height: 1.5;
-    margin: 0;
 }
 
 .post-options {
     flex: 0 0 auto;
-    color: #ffffff;
+    color: var(--white);
     font-size: 15px;
     cursor: pointer;
     transition: color 0.2s ease;
 }
 
 .post-options:hover {
-    color: #42a5d5;
+    color: var(--blue);
 }
 
 .post-title {
     margin: 0 0 14px;
-    color: #ffffff;
+    color: var(--white);
     font-size: clamp(24px, 2.6vw, 28px);
     font-weight: 700;
     line-height: 1.2;
@@ -128,7 +138,7 @@ body {
 
 .post-description {
     margin: 0 0 18px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 13px;
     font-weight: 700;
     line-height: 1.4;
@@ -145,7 +155,7 @@ body {
 
 .post-content {
     margin: 18px 0 0;
-    color: #ffffff;
+    color: var(--white);
     font-size: 13px;
     line-height: 1.55;
 }
@@ -167,7 +177,7 @@ body {
 
 .post-content h2 {
     margin: 22px 0 6px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 14px;
     font-weight: 700;
     line-height: 1.4;
@@ -176,8 +186,8 @@ body {
 .post-quote {
     margin: 8px 0 12px;
     padding: 4px 0 4px 12px;
-    border-left: 2px solid #42a5d5;
-    color: #ffffff;
+    border-left: 2px solid var(--blue);
+    color: var(--white);
     font-size: 16px;
     line-height: 1.5;
 }
@@ -185,7 +195,7 @@ body {
 .post-category-link {
     display: inline-block;
     margin-top: 4px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 12px;
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -194,25 +204,25 @@ body {
 
 .post-category-link:hover,
 .post-category-link:focus-visible {
-    color: #42a5d5;
+    color: var(--blue);
 }
 
 .post-social-share {
     margin-top: 20px;
     padding: 14px 0;
-    border-top: 1px solid #292929;
-    border-bottom: 1px solid #292929;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .post-share-icons {
     display: flex;
     align-items: center;
     gap: 24px;
-    color: #ffffff;
-    font-size: 14px;
-    list-style: none;
     padding: 0;
     margin: 0;
+    color: var(--white);
+    font-size: 14px;
+    list-style: none;
 }
 
 .post-share-icons li {
@@ -222,7 +232,7 @@ body {
 
 .post-share-icons li:hover {
     transform: translateY(-2px);
-    color: #42a5d5;
+    color: var(--blue);
 }
 
 .post-engagement {
@@ -231,7 +241,7 @@ body {
     justify-content: space-between;
     gap: 16px;
     padding-top: 14px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 12px;
 }
 
@@ -248,7 +258,7 @@ body {
 }
 
 .post-likes i {
-    color: #ff4141;
+    color: var(--red);
     font-size: 14px;
     transition: transform 0.2s ease;
 }
@@ -266,19 +276,19 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 12px;
 }
 
 .section-heading a {
-    color: #ffffff;
+    color: var(--white);
     font-size: 11px;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .section-heading a:hover {
-    color: #42a5d5;
+    color: var(--blue);
 }
 
 .recent-post-list {
@@ -289,17 +299,16 @@ body {
 
 .recent-post-card {
     min-width: 0;
-    border: 1px solid #292929;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 4px;
     overflow: hidden;
-    /* Added article-enter animation on page load */
-    animation: article-enter 600ms ease-out both;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--black);
+    color: var(--white);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-/* Stagger the card entrance animations slightly for a polished look */
 .recent-post-list .recent-post-card:nth-child(1) {
     animation-delay: 100ms;
 }
@@ -356,7 +365,7 @@ body {
     gap: 9px;
     margin: 0 12px;
     padding: 10px 0;
-    border-top: 1px solid #292929;
+    border-top: 1px solid var(--border);
     font-size: 10px;
 }
 
@@ -373,7 +382,7 @@ body {
 }
 
 .recent-post-likes i {
-    color: #ff4141;
+    color: var(--red);
 }
 
 .comments-box {
@@ -381,15 +390,13 @@ body {
     margin-top: 18px;
     padding: 36px clamp(24px, 6vw, 68px);
     border: 1px solid #202020;
-    color: #ffffff;
-    animation: article-enter 600ms ease-out both;
-    animation-delay: 400ms;
+    color: var(--white);
 }
 
 .comments-box h2 {
     margin: 0;
     padding-bottom: 12px;
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid var(--border);
     font-size: 12px;
 }
 
@@ -404,15 +411,17 @@ body {
     padding: 0 12px;
     border: 1px solid #393939;
     border-radius: 0;
-    background: #000000;
-    color: #ffffff;
+    background: var(--black);
+    color: var(--white);
     font: inherit;
     font-size: 12px;
-    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
 .comments-box input::placeholder {
-    color: #aaaaaa;
+    color: var(--grey);
 }
 
 .comments-box input:hover {
@@ -422,8 +431,20 @@ body {
 
 .comments-box input:focus-visible {
     outline: none;
-    border-color: #ffffff;
-    box-shadow: 0 0 0 1px #ffffff;
+    border-color: var(--white);
+    box-shadow: 0 0 0 1px var(--white);
+}
+
+/* Shared animation */
+
+.inmain,
+.recent-post-card,
+.comments-box {
+    animation: article-enter 600ms ease-out both;
+}
+
+.comments-box {
+    animation-delay: 400ms;
 }
 
 @keyframes article-enter {
@@ -445,6 +466,7 @@ body {
     height: 280px;
     border: 0;
 }
+
 
 @media (max-width: 700px) {
     body {
@@ -533,6 +555,12 @@ body {
     }
 }
 
+@media (max-width: 300px) {
+    .site-footer-frame {
+        height: 600px;
+    }
+}
+
 @media (max-width: 220px) {
     .MAIN {
         width: calc(100% - 16px);
@@ -590,12 +618,3 @@ body {
         aspect-ratio: 16 / 9;
     }
 }
-
-@media (max-width: 300px) {
-    .site-footer-frame {
-        height: 600px;
-    }
-}
-
-@media (max-width: 200px) {
-    .site

@@ -173,7 +173,6 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Removed external outline gaps and replaced with clean border focus states */
 .contact-form input:focus-visible,
 .contact-form textarea:focus-visible {
     outline: none;

@@ -5,15 +5,8 @@ body {
     min-height: 100%;
     margin: 0;
     background-color: #000000;
+    overflow-x: hidden;
 }
-
-/* .site-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-} */
 
 body {
     padding-top: 46px;
@@ -38,6 +31,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     list-style: none;
+    padding: 0;
 }
 
 .posts li {
@@ -48,6 +42,7 @@ body {
 .posts a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .posts a:hover,
@@ -60,6 +55,12 @@ body {
     margin-left: auto;
     color: #d7d7d7;
     font-size: 13px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.posts .posts-search:hover {
+    color: #ffffff;
 }
 
 .inmain {
@@ -102,12 +103,19 @@ body {
     color: #ffffff;
     font-size: 14px;
     line-height: 1.5;
+    margin: 0;
 }
 
 .post-options {
     flex: 0 0 auto;
     color: #ffffff;
     font-size: 15px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.post-options:hover {
+    color: #42a5d5;
 }
 
 .post-title {
@@ -132,6 +140,7 @@ body {
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .post-content {
@@ -147,6 +156,13 @@ body {
 
 .post-hashtag {
     color: #3899ec;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.post-hashtag:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 .post-content h2 {
@@ -173,6 +189,7 @@ body {
     font-size: 12px;
     text-decoration: underline;
     text-underline-offset: 2px;
+    transition: color 0.2s ease;
 }
 
 .post-category-link:hover,
@@ -194,6 +211,18 @@ body {
     color: #ffffff;
     font-size: 14px;
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-share-icons li {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.post-share-icons li:hover {
+    transform: translateY(-2px);
+    color: #42a5d5;
 }
 
 .post-engagement {
@@ -215,11 +244,17 @@ body {
 
 .post-likes {
     gap: 6px;
+    cursor: pointer;
 }
 
 .post-likes i {
     color: #ff4141;
     font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.post-likes:hover i {
+    transform: scale(1.25);
 }
 
 .recent-posts {
@@ -239,6 +274,11 @@ body {
     color: #ffffff;
     font-size: 11px;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.section-heading a:hover {
+    color: #42a5d5;
 }
 
 .recent-post-list {
@@ -250,7 +290,32 @@ body {
 .recent-post-card {
     min-width: 0;
     border: 1px solid #292929;
+    background-color: #000000;
     color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    /* Added article-enter animation on page load */
+    animation: article-enter 600ms ease-out both;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger the card entrance animations slightly for a polished look */
+.recent-post-list .recent-post-card:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+.recent-post-list .recent-post-card:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.recent-post-list .recent-post-card:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.recent-post-card:hover {
+    transform: translateY(-4px);
+    border-color: #555555;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
 }
 
 .recent-post-link {
@@ -264,6 +329,11 @@ body {
     width: 100%;
     aspect-ratio: 1.6 / 1;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recent-post-card:hover .recent-post-link img {
+    transform: scale(1.06);
 }
 
 .recent-post-link h3 {
@@ -273,6 +343,11 @@ body {
     font-size: 12px;
     font-weight: 700;
     line-height: 1.25;
+    transition: color 0.2s ease;
+}
+
+.recent-post-link:hover h3 {
+    color: #4da6ff;
 }
 
 .recent-post-stats {
@@ -308,6 +383,7 @@ body {
     border: 1px solid #202020;
     color: #ffffff;
     animation: article-enter 600ms ease-out both;
+    animation-delay: 400ms;
 }
 
 .comments-box h2 {
@@ -325,23 +401,35 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 36px;
-    padding: 0 10px;
+    padding: 0 12px;
     border: 1px solid #393939;
     border-radius: 0;
     background: #000000;
     color: #ffffff;
     font: inherit;
     font-size: 12px;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .comments-box input::placeholder {
-    color: #ffffff;
+    color: #aaaaaa;
+}
+
+.comments-box input:hover {
+    border-color: #777777;
+    background-color: #111111;
+}
+
+.comments-box input:focus-visible {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff;
 }
 
 @keyframes article-enter {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
 
     to {
@@ -357,11 +445,6 @@ body {
     height: 280px;
     border: 0;
 }
-
-
-
-
-
 
 @media (max-width: 700px) {
     body {
@@ -515,14 +598,4 @@ body {
 }
 
 @media (max-width: 200px) {
-    .site-footer-frame {
-        height: 720px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .inmain,
-    .comments-box {
-        animation: none;
-    }
-}
+    .site
